@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1) https://leetcode.com/problems/squares-of-a-sorted-array
+
+      //let sortedSque = num => num.map(x=>x*x).sort((a,b) =>a-b);
+
+      // 2) https://leetcode.com/problems/rotate-array/
+
+      //   function rotateArray(arr, k) {
+      //       let leftItem = arr.slice(0,arr.length -k);
+      //       let rightItem = arr.slice(arr.length-k);
+      //       for(let i = 0; i < rightItem.length; i++) {
+      //           arr[i] = rightItem[i];
+      //       }
+      //       for(let j = 0; j < leftItem.length; j++) {
+      //           arr[j+k] = leftItem[j];
+      //       }
+      //       return arr;
+      //   }
+      //   console.log(rotateArray([1,2,3,4,5,6],3));
+
+      // 3) find out first nonrepeatable chracter in a string
+      // function firstNonRepeatedCharacter(string) {debugger;
+      //   for (var i = 0; i < string.length; i++) {
+      //     var c = string.charAt(i);
+      //     if (string.indexOf(c) == i && string.indexOf(c, i + 1) == -1) {
+      //       return c;
+      //     }
+      //   }
+      //   return null;
+      // }
+
+      // var someString = "aabcbd";
+      // console.log(firstNonRepeatedCharacter(someString));
+      let x = "5";
+      let y = parseInt(x);
+      console.log(typeof(x));
+      console.log(typeof(y));
+    </script>
+  </body>
+</html>

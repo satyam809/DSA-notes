@@ -1,0 +1,16 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://shagun123@bitbucket.org/shagun123/javascript-data-structure-and-algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/shagun123/javascript-data-structure-and-algorithm#readme"
+}
