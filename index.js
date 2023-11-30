@@ -3,3 +3,4 @@
 //     return arr.filter((ele) => ele % 2 === 0)
 // }
 // console.log(evenNo(arr))
+
