@@ -1,6 +1,17 @@
-// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// function evenNo(arr) {
-//     return arr.filter((ele) => ele % 2 === 0)
-// }
-// console.log(evenNo(arr))
+function naiveSearch(string, subString) {
+    for (let i = 0; i <= string.length - subString.length; i++) {
+        let found = true;
+        for (let j = 0; j < subString.length; j++) {
+            if (string[i + j] !== subString[j]) {
+                found = false;
+                break;
+            }
+        }
+        if (found) {
+            return true;
+        }
+    }
+    return false;
+}
 
+module.exports = naiveSearch;

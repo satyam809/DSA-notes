@@ -55,7 +55,7 @@ function divideAndConquer(arr, value) {
   let minIndex = 0;
   let maxIndex = arr.length - 1;
   while (minIndex <= maxIndex) {
-    let middleIndex = Math.floor(arr.length / 2);
+    let middleIndex = Math.floor((minIndex + maxIndex) / 2);
     if (arr[middleIndex] > value) {
       maxIndex = middleIndex--;
     } else if (arr[middleIndex] < value) {
