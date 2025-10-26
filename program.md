@@ -25,3 +25,17 @@ function checkPalindrome(num){
     return (rev == copyNum) ? true : false;
 }
 console.log(checkPalindrome(10))
+
+//Reverse Digits of an Integer
+function reverseInteger(num){
+    let copyNum = num;
+    copyNum = Math.abs(copyNum)
+    let rev = 0;
+    while(copyNum > 0){
+        let lastDigit = copyNum%10;
+        rev = (10 * rev) + lastDigit;
+        copyNum = Math.floor(copyNum/10);
+    }
+   return num < 0 ? -rev : rev;
+}
+console.log(reverseInteger(123))
