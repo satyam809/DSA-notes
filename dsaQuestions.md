@@ -55,4 +55,45 @@ var search = function(nums, target) {
     }
     return -1;
 };
+// sum of first n number using recursion
+function sum(num){
+    if(num == 0) return 0;
+    return num + sum(num - 1)
+}
+console.log(sum(5))
 
+// sum of all elements in an array
+let arr = [5, 2, 6, 1, 3];
+function sum(index){
+    if(index == 0) return arr[index];
+    return arr[index] + sum(index - 1)
+}
+console.log(sum(arr.length - 1))
+
+// sum of all odd number in an array using recursion
+let arr = [5, 2, 6, 1, 3];
+function sum(index){
+    let isOdd = arr[index] % 2 != 0;
+    if(index == 0) return isOdd ? arr[index] : 0;
+    return (isOdd ? arr[index] : 0) + sum(index -1)
+}
+console.log(sum(arr.length - 1))
+
+// calculate factorial using recursion
+function factorial(n){
+    if(n == 1) return 1;
+    return n * factorial(n-1)
+}
+console.log(factorial(5))
+
+//231. Power of Two
+var isPowerOfTwo = function(n) {
+    if(n == 1){
+        return true;
+    }
+    if(n > 1){
+        return isPowerOfTwo(n/2);
+    }else{
+        return false;
+    }
+};
