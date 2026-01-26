@@ -121,3 +121,56 @@ function merge(left, right){
     }
     return [...newArr, ...left.slice(i), ...right.slice(j)]
 }
+
+1796. Second Largest Digit in a String
+var secondHighest = function(s) {
+    let digit = [];
+    let uniqueDigit = [];
+    // fetch digit
+    for(let i = 0; i < s.length; i++){
+        if(Number(s[i]) <= 9){
+          digit.push(Number(s[i]))
+        }
+    }
+    console.log('digit ',digit)
+    // remove duplicate
+    for(let j = 0; j < digit.length; j++){
+        let exist = true;
+       for(let k = 0; k < uniqueDigit.length; k++){
+        if(digit[j] == uniqueDigit[k]){
+            exist = false;
+            break;
+        }
+       }
+      if(exist) uniqueDigit.push(digit[j]);
+    }
+    console.log('unique digit', uniqueDigit)
+    // sort
+    const sort = sorting(uniqueDigit);
+    console.log('sort', sort)
+    return sort.length == 1 ? -1 : sort[sort.length - 2];
+};
+
+function sorting(arr){
+    if(arr.length <= 1) return arr;
+    let mid = Math.floor((0 + arr.length)/2);
+    let left = sorting(arr.slice(0, mid));
+    let right = sorting(arr.slice(mid));
+    return sort(left, right);
+}
+
+function sort(left, right){
+    let i = 0;
+    let j = 0;
+    let arr = []
+    while(i < left.length && j < right.length){
+        if(left[i] < right[j]){
+          arr.push(left[i]);
+          i++;
+        }else{
+            arr.push(right[j]);
+            j++;
+        }
+    }
+    return [...arr, ...left.slice(i), ...right.slice(j)]
+}
